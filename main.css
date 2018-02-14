@@ -71,9 +71,11 @@ div > img{
     display: block;
 }
 
-#navbar, #navbar-collapsed{
-    background-color: unset;
-    border-color: transparent;
+#navbar, #navbar-collapsed {
+    transition-property: all;
+    transition-duration: .5s; /* on aurait pu écrire 500ms également */
+    transition-timing-function: ease-in;
+    /*transition-delay: 1s;*/
 }
 
 .centré{
@@ -107,4 +109,8 @@ li {
 
 div > img{
     margin-bottom: 20px;
+}
+
+#main_div, #side_menu{
+    padding-top: 50px;
 }
