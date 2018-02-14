@@ -20,10 +20,10 @@
     }
 }
 /*Fin Salvattore*/
-
+/*
 .img-grid{
     margin-top: 20px;
-}
+}*/
 
 /*for tests*/
 .border-dashed{
@@ -95,9 +95,6 @@ li {
     text-align: -moz-left;
 }
 
-.img-grid{
-    margin-top: 20px;
-}
 
 .border-dashed{
     border: dashed 1px
@@ -112,5 +109,6 @@ div > img{
 }
 
 #main_div, #side_menu{
-    padding-top: 50px;
+    padding-top: 100px;
 }
+/*minheignt sur le navbar*/
