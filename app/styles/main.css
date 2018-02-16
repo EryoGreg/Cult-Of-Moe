@@ -26,7 +26,6 @@
 .border-dashed{
   border: dashed 1px
 }
-
 /*Fin For tests*/
 
 .padding{
@@ -45,17 +44,16 @@ div > img{
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: cover; /* version standardisée */
 }
-
+/*
 #Background1{
   background:url("../images/Bakground1.jpg") no-repeat center fixed;
   margin:0;
   padding:0;
-  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  background-size: cover; /* version standardisée */
-}
+  -webkit-background-size: cover; !* pour anciens Chrome et Safari *!
+  background-size: cover; !* version standardisée *!
+}*/
 
 #Menu{
-
   background-color: #6B8FD4;
 }
 
@@ -83,7 +81,7 @@ div > img{
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover{
-  background-color: unset !important;
+  background-color: inherit !important;
 }
 
 
@@ -96,18 +94,25 @@ li {
 .border-dashed{
   border: dashed 1px
 }
-.padding{
-  padding: 10px;
-}
-
 
 div > img{
   margin-bottom: 20px;
 }
-
+/* décalage avec le menu  fixé top*/
 #main_div, #side_menu{
   padding-top: 100px;
 }
+
+.img-responsive{
+  min-width: 100px;
+}
+
+#tag-bloc{
+  min-width: 75px;
+  padding: 10px;
+}
+
+
 /*minheignt sur le navbar*/
 
 

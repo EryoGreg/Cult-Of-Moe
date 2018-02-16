@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'angularCSS'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -37,7 +38,25 @@ angular
       .when('/index', {
         templateUrl: 'views/index.html',
         controller: 'IndexCtrl',
-        controllerAs: 'index'
+        controllerAs: 'index',
+        css: 'styles/main.css'
+      })
+      .when('/connexion', {
+        templateUrl: 'views/connexion.html',
+        controller: 'ConnexionCtrl',
+        controllerAs: 'connexion',
+        css: 'styles/connexion.css'
+      })
+      .when('/inscription', {
+        templateUrl: 'views/inscription.html',
+        controller: 'InscriptionCtrl',
+        controllerAs: 'inscription'
+      })
+      .when('/inscription', {
+        templateUrl: 'views/inscription.html',
+        controller: 'InscriptionCtrl',
+        controllerAs: 'inscription',
+        css: 'styles/inscription.css'
       })
       .otherwise({
         redirectTo: '/index'
