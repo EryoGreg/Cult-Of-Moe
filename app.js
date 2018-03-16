@@ -33,6 +33,12 @@ app.get('/connexion', function (req, res) {
     res.sendFile(path.join(__dirname, './views/connexion.html'))
 });
 
+app.post('/login', function (req,res) {
+    var infos = req.body.email + " " + req.body.password;
+    console.log("infos : "+infos);
+    res.send(req.body)
+});
+
 
 
 // composents des pages chargés

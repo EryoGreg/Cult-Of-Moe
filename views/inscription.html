@@ -5,9 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Inscription</title>
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/styles/inscription.css">
+    <link rel="stylesheet" href="/javascripts/inscription.js">
 </head>
 <body>
 
@@ -70,7 +71,7 @@
 
 <!--Main div-->
 <div class="well well-sm col-xs-8 col-xs-offset-2" id="FormDiv">
-    <form role="form" ng-submit="loginfunc()" id="register" method="post" action="SUCCESS">
+    <form role="form" id="register" method="post" action="login">
         <div class="row">
             <div class="col-md-offset-1 col-md-10">
                 <h1> Inscription <br/> <small> Merci de renseigner vos informations </small></h1>
@@ -81,13 +82,13 @@
             <div class="col-md-offset-1 col-md-5">
                 <div class="form-group">
                     <label for="Nom">Nom</label>
-                    <input ng-model="nom" type="text" class="form-control" id="nom" placeholder="Nom"/>
+                    <input name="nom" type="text" class="form-control" id="nom" placeholder="Nom"/>
                 </div>
             </div>
             <div class=" col-md-5">
                 <div class="form-group">
                     <label for="Prenom">Prénom</label>
-                    <input ng-model="prenom" type="text" class="form-control" id="prenom" placeholder="Prénom"/>
+                    <input name="prenom" type="text" class="form-control" id="prenom" placeholder="Prénom"/>
                 </div>
             </div>
         </div>
@@ -96,7 +97,7 @@
             <div class="col-md-offset-1 col-md-10">
                 <div class="form-group">
                     <label for="Email">Email address</label>
-                    <input ng-model="email" type="text" class="form-control" id="email" placeholder="Enter email"/>
+                    <input name="email" type="text" class="form-control" id="email" placeholder="Enter email"/>
                 </div>
             </div>
         </div>
@@ -105,13 +106,13 @@
             <div class="col-md-offset-1 col-md-5">
                 <div class="form-group">
                     <label for="Password">Mot de passe</label>
-                    <input ng-model="password" type="password" class="form-control" id="password" placeholder="Mot de passe"/>
+                    <input name="password" type="password" class="form-control" id="password" placeholder="Mot de passe"/>
                 </div>
             </div>
             <div class=" col-md-5">
                 <div class="form-group">
                     <label for="Vpassword">Vérification mot de passe</label>
-                    <input ng-model="vpassword" type="password" class="form-control" id="vpassword" placeholder="Vérification mot de passe"/>
+                    <input name="vpassword" type="password" class="form-control" id="vpassword" placeholder="Vérification mot de passe"/>
                 </div>
             </div>
         </div>
