@@ -7,13 +7,16 @@ const Users = sequelize.define('users', {
         primaryKey: true,
         autoIncrement: true
     },
-    login: {
+    nom: {
+        type: Sequelize.STRING
+    },
+    prenom: {
+        type: Sequelize.STRING
+    },
+    email: {
         type: Sequelize.STRING
     },
     password: {
-        type: Sequelize.STRING
-    },
-    pseudo: {
         type: Sequelize.STRING
     }
 //    createdat / updatedat sont crée de base dans la bdd

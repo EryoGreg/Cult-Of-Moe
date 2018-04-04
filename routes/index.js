@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
+const Users = require('../models/Users');
 
 
 /* GET home page. */
@@ -23,35 +24,25 @@ router.get('/connexion', function (req, res) {
     res.sendFile(path.join(__dirname, '../views/connexion.html'))
 });
 
-router.post('/login', function (req, res) {
-    var infos = req.body.email + " " + req.body.password;
-    console.log("infos : " + infos);
-    res.send(req.body)
+router.post('/inscription', function (req, res) {
+    let nom = req.body.nom;
+    let prenom = req.body.prenom;
+    let email = req.body.email;
+    let password = req.body.password;
 
+    console.log('nom : ' + nom);
 
-    /*
-        <?php
-       if(isset($_POST['Submit']))
-       {
-        //Renvoie vers la page principale
-        header('Location: /');
-       }
-    ?>
-
-    <?php
-    $json = 'infos';
-
-    var_dump(json_decode($json));
-    var_dump(json_decode($json, true));
-    ?>
-
-    */
+    Users.create({nom: nom, prenom: prenom, email: email, password: password})
+        .then(function () {
+            res.redirect('/');
+        });
 });
 
-// router.get('/image.php', function(req, res, next) {
-//   // res.render('index', { title: 'Express' });
-//     res.sendFile(path.join(__dirname, '../views/image.php'))
-// });
+router.post('/login', function (req, res) {
+    let infos = req.body.email + " " + req.body.password;
+    console.log("infos : " + infos);
+    res.send(req.body)
+});
 
 
 module.exports = router;
