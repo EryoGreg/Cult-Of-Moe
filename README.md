@@ -1,12 +1,9 @@
-# test-of-moe2
+Projet de groupe
+Elouan Draz et Grégoire Pessiot
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
+Idée principale: regrouper les Wallpapers récupérés sur internet et stockés sur nos ordinateurs afin de les avoir constamment et potentiellement les partager plus facilement.
 
-## Build & development
-
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+faire fonctionner:
+npm install
+npm start
+//port 3000 -> "http://localhost:3000/"
