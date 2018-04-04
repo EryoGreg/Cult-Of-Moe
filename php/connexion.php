@@ -16,6 +16,14 @@ catch(Exception $e)
     die ('Erreur : '.$e->getMessage());
 }
 
+if (isset($_POST['register'])){
+    $req = $bdd->prepare('SELECT count (id) AS "nb" FROM utilisateur WHERE mail = ? AND password = ?');
+    $req->execute(array($_POST['mail'], $_POST['password']));
+
+    $result = $req->fetch();
+    session_start();
+    $SESSION['user_id'] | = $result['id'];
+
 /* Liste des utilisateurs PHP   #1
 $req = $bdd->prepare('SELECT * FROM utilisateur');
 $req->execute();

@@ -51,7 +51,33 @@
                     <input type="text" class="form-control" placeholder="Search">
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
-            </form><!--
+                    
+                <!--
+                if(!isset($_POST)) {
+                on affiche l'icone de l'utilisateur
+                
+                <?php
+                $req = "SELECT Pseudo FROM user WHERE user.id = user"
+                echo 'Utilisateur connecté : ' . get_current_user();
+
+                $req = "SELECT img_id, img_type, img_blob" . 
+               "FROM images WHERE img_id = " . $id;
+                $ret = mysql_query ($req) or die (mysql_error ());
+                $col = mysql_fetch_row ($ret);
+                ?>
+
+                <img class="img-responsive text-center" src='User.icone'>
+                
+
+                </div>
+                } else {
+                on renvoie rien
+                }
+                -->
+
+            </form>
+            
+            <!--
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Link</a></li>
                 <li class="dropdown">
@@ -78,7 +104,7 @@
     <!--Menu lateral-->
     <div class="col-xs-2 padding" id="side_menu">
         <div class="well well-sm text-center center-block padding ">
-                <img class="img-responsive text-center" src="../images/Shiro.jpg">
+                <a href="http://google.com"><img class="img-responsive text-center" src="../images/Shiro.jpg"></a>
                 <a class="centré" href="#">tag1</a>
             <br>
                 <a class="centré" href="#">tag2</a>
