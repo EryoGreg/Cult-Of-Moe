@@ -7,12 +7,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
@@ -24,40 +23,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);  // app.use sert aux middlewares // app.all pour toutes les requettes http sinon app.get/post etc
-
-app.get('/inscription', function (req, res) {
-    res.sendFile(path.join(__dirname, './views/inscription.html'))
-});
-
-app.get('/connexion', function (req, res) {
-    res.sendFile(path.join(__dirname, './views/connexion.html'))
-});
-
-app.post('/login', function (req,res) {
-    var infos = req.body.email + " " + req.body.password;
-    console.log("infos : "+infos);
-    res.send(req.body)
-
-
-/*
-    <?php
-   if(isset($_POST['Submit']))
-   {
-    //Renvoie vers la page principale
-    header('Location: /');
-   }
-?>
-
-<?php
-$json = 'infos';
-
-var_dump(json_decode($json));
-var_dump(json_decode($json, true));
-?>
-
-*/
-});
 
 
 
