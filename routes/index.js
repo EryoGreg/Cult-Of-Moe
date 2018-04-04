@@ -30,18 +30,35 @@ router.post('/inscription', function (req, res) {
     let email = req.body.email;
     let password = req.body.password;
 
-    console.log('nom : ' + nom);
-
     Users.create({nom: nom, prenom: prenom, email: email, password: password})
+
         .then(function () {
             res.redirect('/');
         });
 });
 
-router.post('/login', function (req, res) {
-    let infos = req.body.email + " " + req.body.password;
-    console.log("infos : " + infos);
-    res.send(req.body)
+
+
+
+router.post('/connexion', async function (req, res) {
+    
+    var email = req.body.email;
+    var password = req.body.password;
+
+    var nomUser = await Users.findAll({where : {email: req.body.email}});
+
+    if (password == nomUser[0].dataValues.password)
+    {
+        console.log(nomUser[0].dataValues.password);
+        console.log(nomUser[0].dataValues.email);
+        res.sendFile(path.join(__dirname, '../views/index.html'));
+    }
+
+    else{
+        console.log("Nope");
+        return;
+        }
+
 });
 
 
