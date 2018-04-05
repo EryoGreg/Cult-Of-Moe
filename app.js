@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sqlize = require('./models/Sequelize');
 
+
 var index = require('./routes/index');
 
 var app = express();
