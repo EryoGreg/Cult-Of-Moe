@@ -32,7 +32,7 @@
   padding: 10px;
 }
 
-div > img{
+div > img, a > img{
   margin-bottom: 20px;
 }
 
@@ -95,9 +95,6 @@ li {
   border: dashed 1px
 }
 
-div > img{
-  margin-bottom: 20px;
-}
 /* décalage avec le menu  fixé top*/
 #main_div, #side_menu{
   padding-top: 100px;

@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "starter": "npm install && bower install && npm start",
     "start": "node ./bin/www"
   },
   "dependencies": {

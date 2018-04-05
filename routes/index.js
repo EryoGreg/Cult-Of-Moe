@@ -5,12 +5,12 @@ const Users = require('../models/Users');
 
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', function (req, res) {
     // res.render('index', { title: 'Express' });
     res.sendFile(path.join(__dirname, '../views/index.html'))
 });
 
-router.get('/image/:id', function (req, res, next) {
+router.get('/image/:id', function (req, res) {
     ///todo ID
     // res.render('index', { title: 'Express' });
     res.sendFile(path.join(__dirname, '../views/image.html'))
@@ -44,5 +44,10 @@ router.post('/login', function (req, res) {
     res.send(req.body)
 });
 
+router.get('/profil', function (req, res) {
+    // res.render('index', { title: 'Express' });
+    // res.sendFile(path.join(__dirname, '../views/profil.html'))
+    res.render('profil', {nom: 'mynom', prenom: 'myprenom', email: 'myemail', id: 123})
+});
 
 module.exports = router;
