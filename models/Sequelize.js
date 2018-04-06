@@ -1,5 +1,4 @@
 const path = require('path');
-// const todos = require('./todo');
 const Sequelize = require('sequelize');
 
 

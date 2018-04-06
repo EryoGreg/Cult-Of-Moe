@@ -1,27 +1,23 @@
 const Sequelize = require('sequelize');
 const sequelize = require('./sequelize')
 
-const Users = sequelize.define('users', {
+const Images = sequelize.define('users', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    nom: {
+    nom: {          // deemo.jpg
         type: Sequelize.STRING
     },
-    prenom: {
-        type: Sequelize.STRING
+    iduser: {
+        type: Sequelize.INTEGER
     },
-    email: {
-        type: Sequelize.STRING,
-        unique: true
-    },
-    password: {
+    tags: {          // deemo.jpg
         type: Sequelize.STRING
     }
 //    createdat / updatedat sont crée de base dans la bdd
 });
 
-Users.sync();
-module.exports = Users;
+Images.sync()
+module.exports = Images

@@ -37,9 +37,6 @@ router.post('/inscription', function (req, res) {
         });
 });
 
-
-
-
 router.post('/connexion', async function (req, res) {
     
     var email = req.body.email;
