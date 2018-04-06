@@ -1,0 +1,20 @@
+
+/* Background */
+body{
+  background:url("../images/Bakground1.jpg") no-repeat center fixed;
+  margin:0;
+  padding:0;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+}
+
+#FormDiv{
+  margin-top: 100px;
+}
+
+/* transparence menu*/
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover{
+  background-color: inherit !important;
+}

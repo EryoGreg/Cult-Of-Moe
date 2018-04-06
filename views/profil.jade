@@ -1,0 +1,102 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Profil
+        link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='../bower_components/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='/styles/profil.css')
+    body#Background
+        // Menu horizontal
+        nav#navbar.navbar.navbar-default.navbar-fixed-top
+            .container-fluid
+                // Brand and toggle get grouped for better mobile display
+                .navbar-header
+                    button#navbar-collapsed.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar_content', aria-expanded='false')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='/') Cult Of Moe
+                // Collect the nav links, forms, and other content for toggling
+                #navbar_content.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li.active
+                            a(href='#')
+                                | Accueil
+                                span.sr-only (current)
+                        li
+                            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                                | Ajouter
+                                span.caret
+                            ul.dropdown-menu
+                                li
+                                    a(href='#') Ajouter une image
+                                li.divider(role='separator')
+                                li
+                                    a(href='#') Ajouter un GIF
+                        li
+                            a(href='#') tags
+                        li
+                            a(href='#') favoris
+                        li
+                            a(href='/inscription') inscription
+                        li
+                            a(href='/connexion') connexion
+                        li
+                            a(href='#') rechercher
+                    form.navbar-form.navbar-left
+                        .form-group
+                            input.form-control(type='text', placeholder='Search')
+                        button.btn.btn-default(type='submit') Submit
+                    //
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="#">Link</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                // /.navbar-collapse
+            // /.container-fluid
+        // Fin Menu horizontal
+        .main_page
+            .col-xs-10.col-xs-offset-1.well-sm.well
+                form#register(role='form', method='post')
+                    h2.text-center.col-xs-12  Informations de compte
+                    .row
+                        .col-md-offset-1.col-md-5
+                            .form-group
+                                label(for='Nom') Nom
+                                input#nom.form-control(name='nom', type='text', placeholder='#{nom}')
+                        .col-md-5
+                            .form-group
+                                label(for='Prenom') Prénom
+                                input#prenom.form-control(name='prenom', type='text', placeholder='#{prenom}')
+                    .row
+                        .col-md-offset-1.col-md-5
+                            label(for='Nom') ID
+                            p #{id}
+                        .col-md-5
+                            .form-group
+                                label(for='email') email
+                                input#email.form-control(name='email', type='email', placeholder='#{email}')
+                    .row
+                        .col-md-offset-1.col-md-5
+                            .form-group
+                                label(for='Password') Mot de passe
+                                input#password.form-control(name='password', type='password', placeholder='Mot de passe')
+                        .col-md-5
+                            .form-group
+                                label(for='Vpassword') Vérification mot de passe
+                                input#vpassword.form-control(name='vpassword', type='password', placeholder='Vérification mot de passe')
+                    .row
+                        .col-md-offset-5.col-md-1
+                            button.btn.btn-primary(type='submit', disabled='') modifier les informations
+        script(src='/jquery/dist/jquery.js')
