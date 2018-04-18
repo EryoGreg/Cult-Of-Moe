@@ -1,0 +1,122 @@
+/*For salvattore.com*/
+@media screen and (min-width: 1200px) {
+  .img-grid[data-columns]::before {
+    content: '4 .column.col-xs-3';
+  }
+}
+@media screen and (max-width: 480px){
+  .img-grid[data-columns]::before {
+    content: '1 .column.col-xs-12';
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .img-grid[data-columns]::before {
+    content: '2 .column.col-xs-6';
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .img-grid[data-columns]::before {
+  content: '3 .column.col-xs-4';
+  }
+}
+/*Fin Salvattore*/
+
+
+/*for tests*/
+.border-dashed{
+  border: dashed 1px
+}
+/*Fin For tests*/
+
+.padding{
+  padding: 10px;
+}
+
+div > img, a > img{
+  margin-bottom: 20px;
+}
+
+/* Background */
+#Background{
+  background:url("../../images/Background.jpg") no-repeat center fixed;
+  margin:0;
+  padding:0;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+}
+
+
+
+
+
+
+
+/*IMAGE TEST IMAGECSS*/
+img.Image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+
+
+#Menu{
+  background-color: #6B8FD4;
+}
+
+.Submenu{
+  background-color: #6B8FD4;
+  display: none;
+}
+
+.Submenu:hover{
+  display: block;
+}
+
+#navbar, #navbar-collapsed {
+  transition-property: all;
+  transition-duration: .5s; /* on aurait pu écrire 500ms également */
+  transition-timing-function: ease-in;
+  /*transition-delay: 1s;*/
+}
+
+.centré{
+  width: 70%;
+  margin: auto;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover{
+  background-color: inherit !important;
+}
+
+
+li {
+  list-style-type: none;
+  text-align: -moz-left;
+}
+
+
+.border-dashed{
+  border: dashed 1px
+}
+
+/* décalage avec le menu  fixé top*/
+#main_div, #side_menu{
+  padding-top: 100px;
+}
+
+.img-responsive{
+  min-width: 100px;
+}
+
+#tag-bloc{
+  min-width: 75px;
+  padding: 10px;
+}

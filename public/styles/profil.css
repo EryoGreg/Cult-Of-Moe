@@ -1,0 +1,14 @@
+
+
+/* Background */
+#Background{
+    background:url("../../images/Background.jpg") no-repeat center fixed;
+    margin:0;
+    padding:0;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+}
+
+.main_page{
+    padding-top: 100px;
+}
