@@ -36,11 +36,11 @@
                         <li><a href="#">Ajouter un GIF</a></li>
                     </ul>
                 </li>
-                <li><a href="#">tags</a></li>
-                <li><a href="#">favoris</a></li>
-                <li><a href="/inscription">inscription</a></li>
-                <li><a href="/connexion">connexion</a></li>
-                <li><a href="#">rechercher</a></li>
+                <li><a href="#">Tags</a></li>
+                <li><a href="#">Favoris</a></li>
+                <li><a href="/inscription">Inscription</a></li>
+                <li><a href="/connexion">Connexion</a></li>
+                <li><a href="/deconnection">Déconnecter</a></li>
             </ul>
             <form class="navbar-form navbar-left">
                 <div class="form-group">
@@ -48,28 +48,7 @@
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
 
-                <!--
-                if(!isset($_POST)) {
-                on affiche l'icone de l'utilisateur
-                
-                <?php
-                $req = "SELECT Pseudo FROM user WHERE user.id = user"
-                echo 'Utilisateur connecté : ' . get_current_user();
 
-                $req = "SELECT img_id, img_type, img_blob" . 
-               "FROM images WHERE img_id = " . $id;
-                $ret = mysql_query ($req) or die (mysql_error ());
-                $col = mysql_fetch_row ($ret);
-                ?>
-
-                <img class="img-responsive text-center" src='User.icone'>
-                
-
-                </div>
-                } else {
-                on renvoie rien
-                }
-                -->
 
 
             </form>
@@ -88,7 +67,7 @@
     <!--Menu lateral-->
     <div class="col-xs-2 padding" id="side_menu">
         <div class="well well-sm text-center center-block" id="tag-bloc">
-            <img class="img-responsive text-center" src="/images/Shiro.jpg">
+            <a  href="/profil"><img class="img-responsive text-center" src="/images/Shiro.jpg"></a>
             <a class="centré" href="#">tag1</a>
             <br>
             <a class="centré" href="#">tag2</a>
@@ -108,7 +87,63 @@
                 <a href="/image"><img class="img-responsive" src="/images/bob_ross.gif" alt="Photo" /></a>
             </div>
             <div>
+                <a href="/image"><img class="img-responsive" src="/images/toka.jpg" alt="Photo" /></a>
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/jinx_elfe.png" alt="Photo" />
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/landscape.jpg" alt="Photo" />
+            </div>
+
+            <div>
                 <img class="img-responsive" src="/images/deemo.jpg" alt="Photo" />
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/made_in_abyss_map.jpg" alt="Photo" />
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/mathias-leth-chase.jpg" alt="Photo" />
+            </div>
+
+            <div>
+                <img class="img-responsive" src="/images/mathias-leth-farewell.jpg" alt="Photo" />
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/mathias-leth-monk.jpg" alt="Photo" />
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/subnautica.jpg" alt="Photo" />
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/space.png" alt="Photo" />
+            </div>
+
+            <div>
+                <img class="img-responsive" src="/images/jane-nane-ed.jpg" alt="Photo" />
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/Dragon-Trainer-Tristana-Splash-Art-League-of-Legends-Artwork-Wallpaper-lol.jpg" alt="Photo" />
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/kitty.png" alt="Photo" />
+            </div>
+
+            <div>
+                <img class="img-responsive" src="/images/66618952_p0.jpg" alt="Photo" />
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/manga_One_Piece_anime_1920x1080.jpg" alt="Photo" />
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/white_blue_red_clouds_by_hangmoon-dbwm5ly.jpg" alt="Photo" />
+            </div>
+            <div>
+                <img class="img-responsive" src="/images/kitty.png" alt="Photo" />
+            </div>
+
+            <div>
+                <img class="img-responsive" src="/images/deer-2560x1440-stellar-surreal-artwork-hd-11241.jpg" alt="Photo" />
             </div>
             <div>
                 <img class="img-responsive" src="/images/default.jpg" alt="Photo" />
@@ -116,92 +151,11 @@
             <div>
                 <img class="img-responsive" src="/images/kitty.png" alt="Photo" />
             </div>
-
-            <div>
-                <img class="img-responsive" src="/images/deemo.jpg" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/default.jpg" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/kitty.png" alt="Photo" />
-            </div>
-
-            <div>
-                <img class="img-responsive" src="/images/bob_ross.gif" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/deemo.jpg" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/default.jpg" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/kitty.png" alt="Photo" />
-            </div>
-
-            <div>
-                <img class="img-responsive" src="/images/deemo.jpg" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/default.jpg" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/kitty.png" alt="Photo" />
-            </div>
-
-            <div>
-                <img class="img-responsive" src="/images/bob_ross.gif" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/deemo.jpg" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/default.jpg" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/kitty.png" alt="Photo" />
-            </div>
-
-            <div>
-                <img class="img-responsive" src="/images/deemo.jpg" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/default.jpg" alt="Photo" />
-            </div>
-            <div>
-                <img class="img-responsive" src="/images/kitty.png" alt="Photo" />
-            </div>
-
-
         </div>
-
-
-        <!--<div class="row">
-            <div class="col-xs-3" style="padding: 15px">
-                <img class="img-responsive" src="../images/serge.jpg" alt="Photo" />
-            </div>
-            <div class="col-xs-3" style="padding: 15px">
-                <img class="img-responsive" src="../images/toka.jpg" alt="Photo" />
-            </div>
-            <div class="col-xs-3" style="padding: 15px">
-                <img class="img-responsive" src="../images/deemo.jpg" alt="Photo" />
-            </div>
-            <div class="col-xs-3" style="padding: 15px">
-                <img class="img-responsive" src="../images/default.jpg" alt="Photo" />
-            </div>
-        </div>-->
-
-
-
     </div>
     <!--Fin Main div-->
 
 </div>
-
-
-
-
 <!--Salvattore-->
 <script src="/Salvattore/salvattore.js"></script>
 
