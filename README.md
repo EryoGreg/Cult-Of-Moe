@@ -5,5 +5,6 @@ Idée principale: regrouper les Wallpapers récupérés sur internet et stockés
 
 faire fonctionner:
 npm install
+bower install
 npm start
 //port 3000 -> "http://localhost:3000/"
